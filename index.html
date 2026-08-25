@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Monetag Service Worker Registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('sw.js')
+        .then(function(registration) {
+          console.log('Monetag SW Active:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Monetag SW Error:', error);
+        });
+    });
+  }
+</script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unstoppable Power Hitting | Cricket Gaming Hub</title>
